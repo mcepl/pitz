@@ -253,7 +253,7 @@ class Project(Bag):
         # Walk up...
         for dir in clepy.walkup(starting_path):
 
-            p = os.path.join(dir, 'pitzdir')
+            p = os.path.join(dir, '.pitz')
 
             if os.path.isdir(p):
                 return os.path.abspath(p)
@@ -264,9 +264,9 @@ class Project(Bag):
 
             for root, dirs, files in os.walk(starting_path):
 
-                if 'pitzdir' in dirs:
+                if '.pitz' in dirs:
                     return os.path.abspath(
-                        os.path.join(root, 'pitzdir'))
+                        os.path.join(root, '.pitz'))
 
         raise pitz.ProjectNotFound("Started looking at %s" % starting_path)
 

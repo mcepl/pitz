@@ -169,13 +169,13 @@ class TestFindPitzdir(unittest.TestCase):
 
     def setUp(self):
         os.mkdir('/tmp/walkup')
-        os.mkdir('/tmp/walkup/pitzdir')
-        os.mkdir('/tmp/walkup/pitzdir/foo')
+        os.mkdir('/tmp/walkup/.pitz')
+        os.mkdir('/tmp/walkup/.pitz/foo')
         os.mkdir('/tmp/walkdown')
         os.mkdir('/tmp/walkdown/foo')
         os.mkdir('/tmp/walkdown/foo/bar')
         os.mkdir('/tmp/walkdown/foo/bar/baz')
-        os.mkdir('/tmp/walkdown/foo/bar/baz/pitzdir')
+        os.mkdir('/tmp/walkdown/foo/bar/baz/.pitz')
 
         os.mkdir('/tmp/deadend')
         os.mkdir('/tmp/deadend/foo')
@@ -187,13 +187,13 @@ class TestFindPitzdir(unittest.TestCase):
     def tearDown(self):
 
         os.chdir(os.environ['HOME'])
-        os.rmdir('/tmp/walkdown/foo/bar/baz/pitzdir')
+        os.rmdir('/tmp/walkdown/foo/bar/baz/.pitz')
         os.rmdir('/tmp/walkdown/foo/bar/baz')
         os.rmdir('/tmp/walkdown/foo/bar')
         os.rmdir('/tmp/walkdown/foo')
         os.rmdir('/tmp/walkdown')
-        os.rmdir('/tmp/walkup/pitzdir/foo')
-        os.rmdir('/tmp/walkup/pitzdir')
+        os.rmdir('/tmp/walkup/.pitz/foo')
+        os.rmdir('/tmp/walkup/.pitz')
         os.rmdir('/tmp/walkup')
 
         os.rmdir('/tmp/deadend/foo/bar/baz')
@@ -206,17 +206,17 @@ class TestFindPitzdir(unittest.TestCase):
         Verify we can use the parameter
         """
 
-        assert Project.find_pitzdir('/tmp/walkup/pitzdir') \
-        == '/tmp/walkup/pitzdir'
+        assert Project.find_pitzdir('/tmp/walkup/.pitz') \
+        == '/tmp/walkup/.pitz'
 
     def test_2(self):
         """
         Verify we check os.environ.
         """
 
-        os.environ['PITZDIR'] = '/tmp/walkup/pitzdir'
+        os.environ['PITZDIR'] = '/tmp/walkup/.pitz'
 
-        assert Project.find_pitzdir() == '/tmp/walkup/pitzdir'
+        assert Project.find_pitzdir() == '/tmp/walkup/.pitz'
 
     @raises(IOError)
     def test_3(self):
@@ -224,15 +224,15 @@ class TestFindPitzdir(unittest.TestCase):
         Verify we catch invalid values.
         """
 
-        Project.find_pitzdir('/tmp/boguspitzdir')
+        Project.find_pitzdir('/tmp/bogus.pitz')
 
     def test_4(self):
         """
         Verify we can walk up and find pitzdir.
         """
 
-        os.chdir('/tmp/walkup/pitzdir/foo')
-        assert Project.find_pitzdir() == '/tmp/walkup/pitzdir'
+        os.chdir('/tmp/walkup/.pitz/foo')
+        assert Project.find_pitzdir() == '/tmp/walkup/.pitz'
 
     def test_5(self):
         """
@@ -243,7 +243,7 @@ class TestFindPitzdir(unittest.TestCase):
 
         pitzdir_location = Project.find_pitzdir(walkdown=True)
 
-        assert pitzdir_location == '/tmp/walkdown/foo/bar/baz/pitzdir', \
+        assert pitzdir_location == '/tmp/walkdown/foo/bar/baz/.pitz', \
         pitzdir_location
 
     def test_6(self):

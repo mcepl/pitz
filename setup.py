@@ -17,7 +17,7 @@ setup(
     author_email='matt@tplus1.com',
     url='http://pitz.tplus1.com',
     license='BSD',
-    packages=find_packages(exclude=['docs', 'pitzdir', 'tests']),
+    packages=find_packages(exclude=['docs', '.pitz', 'tests']),
     include_package_data=True,
 
     package_dir={'pitz': 'pitz'},

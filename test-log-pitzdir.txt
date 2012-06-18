@@ -1,0 +1,449 @@
+running test
+running egg_info
+writing requirements to pitz.egg-info/requires.txt
+writing pitz.egg-info/PKG-INFO
+writing top-level names to pitz.egg-info/top_level.txt
+writing dependency_links to pitz.egg-info/dependency_links.txt
+writing entry points to pitz.egg-info/entry_points.txt
+reading manifest file 'pitz.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no previously-included files found matching 'pitzdir'
+writing manifest file 'pitz.egg-info/SOURCES.txt'
+running build_ext
+test_init (test_edit_attributes.TestEditAttributes1) ... ok
+test_wants_to_handle (test_edit_attributes.TestEditAttributes1) ... ok
+test_instantiate (test_handlers.TestFaviconHandler1) ... ok
+test_call (test_handlers.TestFaviconHandler2) ... ok
+test_wants_to_handle (test_handlers.TestFaviconHandler2) ... ok
+test_1 (test_handlers.TestStaticHandler1)
+Verify I can make an instance of a StaticHandler. ... ok
+test_1 (test_handlers.TestStaticHandler2)
+Verify the handler reples with an accurate Last-Modified header. ... ok
+test_2 (test_handlers.TestStaticHandler2)
+Verify handler sends 304 for cached content. ... ok
+test_3 (test_handlers.TestStaticHandler2)
+When the request includes an If-Modified-Since header, and the ... ok
+test_call (test_help.TestHelpHandler) ... ok
+test_init (test_help.TestHelpHandler) ... ok
+test_wants_to_handle (test_help.TestHelpHandler) ... ok
+test_instantiate (test_team.TestTeam1) ... ok
+test_call (test_team.TestTeam2) ... ok
+test_wants_to_handle (test_team.TestTeam2) ... ok
+test_call1 (test_update.TestUpdate1)
+Update the flavor from chocolate to vanilla. ... ok
+test_call2 (test_update.TestUpdate1)
+Update the flavor from chocolate to ['chocolate', 'vanilla']. ... ok
+test_init (test_update.TestUpdate1) ... ok
+test_wants_to_handle1 (test_update.TestUpdate1)
+Verify Update grabs POST requests with valid entity fragments. ... ok
+test_wants_to_handle2 (test_update.TestUpdate1)
+Verify Update ignores POST requests with bogus entity fragments. ... ok
+test_wants_to_handle3 (test_update.TestUpdate1)
+Verify Update ignores GET requests, even if they have valid ... ok
+test_by_frag (tests.test_bag.TestBag) ... ok
+test_by_uuid_1 (tests.test_bag.TestBag) ... ok
+test_by_uuid_2 (tests.test_bag.TestBag) ... ok
+test_contents (tests.test_bag.TestBag) ... ok
+test_does_not_match_dict (tests.test_bag.TestBag) ... ok
+test_grep_1 (tests.test_bag.TestBag) ... ok
+test_grep_2 (tests.test_bag.TestBag) ... ok
+test_html_filename (tests.test_bag.TestBag) ... ok
+test_init (tests.test_bag.TestBag) ... ok
+test_matches_dict (tests.test_bag.TestBag) ... ok
+test_pop (tests.test_bag.TestBag) ... ok
+test_slice (tests.test_bag.TestBag) ... ok
+test_sort (tests.test_bag.TestSorting1) ... ok
+test_sort (tests.test_bag.TestSorting2) ... ok
+test_custom_view_1 (tests.test_bag.TestViews) ... ok
+test_custom_view_2 (tests.test_bag.TestViews) ... ok
+tests.test_bag.test_matches_dict_1 ... ok
+tests.test_bag.test_new_bag ... ok
+tests.test_bag.test_append_1 ... ok
+tests.test_bag.test_to_csv ... ok
+tests.test_bag.test_order_1 ... ok
+tests.test_bag.test_order_2 ... ok
+tests.test_bag.test_summarized_view ... ok
+tests.test_bag.test_detailed_view ... ok
+tests.test_bag.test_contents_1 ... ok
+tests.test_bag.test_str ... ok
+tests.test_bag.test_repr ... ok
+tests.test_bag.test_replace_objects_with_pointers ... ok
+tests.test_bag.test_attributes ... ok
+tests.test_bag.test_values ... ok
+tests.test_bag.test_getitem ... ok
+tests.test_bag.test_grep_1
+Verify we don't try to grep without a pathname. ... ok
+tests.test_bag.test_html ... ok
+tests.test_bag.test_to_html ... ok
+tests.test_bag.test_length ... ok
+test_1 (tests.test_cmdline.TestMkPitzdir) ... ERROR
+test_2 (tests.test_cmdline.TestMkPitzdir) ... ERROR
+test_created_by (tests.test_cmdline.TestPitzAddTask) ... ok
+test_version (tests.test_cmdline.TestPitzAddTask) ... ok
+test_filter (tests.test_cmdline.TestPitzEverything) ... ERROR
+test_grep (tests.test_cmdline.TestPitzEverything) ... ERROR
+test_nofilter (tests.test_cmdline.TestPitzEverything) ... ERROR
+test_version (tests.test_cmdline.TestPitzEverything) ... ok
+test_version (tests.test_cmdline.TestPitzHtml) ... ok
+test_apply_filter_and_grep_1 (tests.test_cmdline.TestPitzScript)
+Make sure nothing blows up. ... ok
+test_version (tests.test_cmdline.TestPitzSetup) ... ok
+test_version (tests.test_cmdline.TestPitzShell) ... ok
+test_filter (tests.test_cmdline.TestPitzTodo) ... ERROR
+test_grep (tests.test_cmdline.TestPitzTodo) ... ERROR
+test_nofilter (tests.test_cmdline.TestPitzTodo) ... ERROR
+test_version (tests.test_cmdline.TestPitzTodo) ... ok
+test_edit (tests.test_entity.TestAllowedTypes)
+Verify we ask for many instances of an attribute when ... ok
+test_setitem (tests.test_entity.TestAllowedTypes)
+Test allowed_types dictionary. ... ok
+test_append (tests.test_entity.TestAppending)
+Verify the _set_project property does an append. ... ok
+test_already_instantiated_1 (tests.test_entity.TestEntity)
+Verify parameters passed in init apply even when entity has ... ok
+test_comment_on_task (tests.test_entity.TestEntity) ... ok
+test_convert_to_allowed_types (tests.test_entity.TestEntity)
+Verify we coerce to an allowed type. ... ok
+test_created_by_1 (tests.test_entity.TestEntity)
+Verify nothing breaks when no current user is set. ... ok
+test_created_by_2 (tests.test_entity.TestEntity) ... ok
+test_detailed_view (tests.test_entity.TestEntity) ... ok
+test_missing_attributes_replaced_with_defaults (tests.test_entity.TestEntity)
+Verify we fill in missing attributes with defaults. ... ok
+test_new_task (tests.test_entity.TestEntity)
+Verify we can make a new task. ... ok
+test_required_fields_1 (tests.test_entity.TestEntity)
+When loading from yaml, verify we don't overwrite required fields. ... ok
+test_required_fields_2 (tests.test_entity.TestEntity)
+Verify entities retrieved from already_instantiated don't ... ok
+test_summarized_view (tests.test_entity.TestEntity) ... ok
+test_update_task_status (tests.test_entity.TestEntity) ... ok
+test_comparision (tests.test_entity.TestEntityComparisons) ... ok
+test_1 (tests.test_entity.TestHilariousBug)
+Simple case of hilarious bug. ... ok
+test_2 (tests.test_entity.TestHilariousBug) ... ok
+test_matches_dict_1 (tests.test_entity.TestMatchesDict)
+Verify matches_dict handles scalars and list comparisons. ... ok
+test_matches_dict_2 (tests.test_entity.TestMatchesDict)
+Verify we can match entities by using their UUID ... ok
+test_matches_dict_3 (tests.test_entity.TestMatchesDict)
+Verify we can match entities by using their title. ... ok
+test_matches_dict_4 (tests.test_entity.TestMatchesDict)
+Verify we can match with lists of titles. ... ok
+test_matches_dict_5 (tests.test_entity.TestMatchesDict)
+Verify we can match with lists of titles. ... ok
+test_matches_dict_6 (tests.test_entity.TestMatchesDict)
+Verify we can match with lists of frags. ... ok
+test_matches_dict_7 (tests.test_entity.TestMatchesDict)
+Test allowed_types['components'] = [Entity] ... ok
+test_order_independence_of_query (tests.test_entity.TestMatchesDict)
+Test two attributes with lists as values. ... ok
+test_order_independence_of_subquery (tests.test_entity.TestMatchesDict)
+Test two attributes with lists, and one of the lists has a title ... ok
+test_abandon_task (tests.test_entity.TestMisc) ... ok
+test_choose_many (tests.test_entity.TestMisc) ... ok
+test_comments (tests.test_entity.TestMisc) ... ok
+test_component (tests.test_entity.TestMisc) ... ok
+test_components_property (tests.test_entity.TestMisc) ... ok
+test_from_uid (tests.test_entity.TestMisc)
+Use the os.getuid() to look up a person. ... ok
+test_milestone_summarized_view (tests.test_entity.TestMisc) ... ok
+test_milestone_todo (tests.test_entity.TestMisc) ... ok
+test_noproject (tests.test_entity.TestMisc) ... ok
+test_project_comments (tests.test_entity.TestMisc) ... ok
+test_project_people (tests.test_entity.TestMisc) ... ok
+test_project_tasks (tests.test_entity.TestMisc) ... ok
+test_project_todo (tests.test_entity.TestMisc) ... ok
+test_repr_after_replace_objects_with_pointers (tests.test_entity.TestMisc) ... ok
+test_show_milestones (tests.test_entity.TestMisc)
+List every milestone. ... ok
+test_started_property (tests.test_entity.TestMisc) ... ok
+test_unscheduled (tests.test_entity.TestMisc) ... ok
+test1 (tests.test_entity.TestNewMethod) ... ok
+test2 (tests.test_entity.TestNewMethod) ... ok
+test_pickle (tests.test_entity.TestPicklingEntity) ... ok
+test_unpickle (tests.test_entity.TestPicklingEntity) ... ok
+test_rst_link_view (tests.test_entity.TestViews) ... ok
+test_1 (tests.test_entity.TestWhatTheyReallyMean)
+Verify we don't alter entities. ... ok
+test_2 (tests.test_entity.TestWhatTheyReallyMean)
+Verify we don't alter look ups that we can't map to entities. ... ok
+test_3 (tests.test_entity.TestWhatTheyReallyMean)
+Convert title of an entity to an entity. ... ok
+test_5 (tests.test_entity.TestWhatTheyReallyMean)
+Verify we type-cast when appropriate. ... ok
+test_6 (tests.test_entity.TestWhatTheyReallyMean)
+Convert a list of titles to a list of entities. ... ok
+test_7 (tests.test_entity.TestWhatTheyReallyMean)
+Pass a list of entities through. ... ok
+test_by_frag (tests.test_entity.TestWhatTheyReallyMean)
+Convert a UUID fragment into an entity. ... ok
+test_by_uuid_1 (tests.test_entity.TestWhatTheyReallyMean)
+Convert a UUID into an entity. ... ok
+test_invalid_title (tests.test_entity.TestWhatTheyReallyMean) ... ok
+test_list_of_entities_2 (tests.test_entity.TestWhatTheyReallyMean)
+Verify I don't mess up a list of entities. ... ok
+test_list_of_entities_3 (tests.test_entity.TestWhatTheyReallyMean)
+Verify I convert a list of titles. ... ok
+test_list_of_frags (tests.test_entity.TestWhatTheyReallyMean)
+Convert a list of fragments to a list of entities. ... ok
+test_list_of_invalid_titles (tests.test_entity.TestWhatTheyReallyMean) ... ok
+test_list_of_uuids (tests.test_entity.TestWhatTheyReallyMean)
+Convert a list of UUIDs to a list of entities. ... ok
+tests.test_entity.test_no_project ... ok
+tests.test_entity.test_summarized_view ... ok
+tests.test_entity.test_replace_objects_with_pointers ... ok
+tests.test_entity.test_replace_pointers_with_objects ... ok
+tests.test_entity.test_from_yaml_file_1 ... ok
+tests.test_entity.test_from_yaml_file_2 ... ok
+tests.test_entity.test_html ... ok
+tests.test_entity.test_to_html_file ... ok
+tests.test_entity.test_self_destruct_1
+Delete an entity. ... ok
+tests.test_entity.test_self_destruct_2
+Delete an entity with activities and verify activities are gone too. ... ok
+tests.test_entity.test_allowed_types ... ok
+tests.test_entity.test_allowed_values ... ok
+test_by_pscore_and_milestone (tests.test_pitz.TestByPscoreAndMilestone) ... ok
+test_1 (tests.test_project.TestFindPitzdir)
+Verify we can use the parameter ... ok
+test_2 (tests.test_project.TestFindPitzdir)
+Verify we check os.environ. ... ok
+test_3 (tests.test_project.TestFindPitzdir)
+Verify we catch invalid values. ... ok
+test_4 (tests.test_project.TestFindPitzdir)
+Verify we can walk up and find pitzdir. ... FAIL
+test_5 (tests.test_project.TestFindPitzdir)
+Verify we can walk down and find the pitzdir. ... FAIL
+test_6 (tests.test_project.TestFindPitzdir) ... FAIL
+test_fresh_pickle (tests.test_project.TestFromPitzdir)
+Verify we use the pickle when we can. ... ok
+test_from_yaml_files (tests.test_project.TestFromPitzdir)
+Verify we can use the yaml files when no pickle exists. ... ok
+test_stale_pickle (tests.test_project.TestFromPitzdir)
+Verify we use the yaml files when the pickle is too old. ... ok
+test_to_pickle1 (tests.test_project.TestPicklingProject) ... ok
+test_to_pickle2 (tests.test_project.TestPicklingProject) ... ok
+test_unpickle (tests.test_project.TestPicklingProject) ... ok
+test_html (tests.test_project.TestProject) ... ok
+test_html_then_pickle (tests.test_project.TestProject) ... ok
+test_jinja_template (tests.test_project.TestProject) ... ok
+test_activities (tests.test_project.TestProperties) ... ok
+test_comments (tests.test_project.TestProperties) ... ok
+test_components (tests.test_project.TestProperties) ... ok
+test_estimates (tests.test_project.TestProperties) ... ok
+test_me (tests.test_project.TestProperties) ... ok
+test_milestones (tests.test_project.TestProperties) ... ok
+test_people (tests.test_project.TestProperties) ... ok
+test_recent_activity (tests.test_project.TestProperties) ... ok
+test_started (tests.test_project.TestProperties) ... ok
+test_statuses (tests.test_project.TestProperties) ... ok
+test_tasks (tests.test_project.TestProperties) ... ok
+test_unscheduled (tests.test_project.TestProperties) ... ok
+test_missing_pathname (tests.test_project.TestSaveToYaml) ... ok
+test_setup_defaults (tests.test_project.TestSetupDefaults)
+Verify the project calls setup_defaults. ... ok
+tests.test_project.test_to_and_from_yaml_files_1 ... ok
+tests.test_project.test_load_entities_1 ... ok
+tests.test_project.test_load_entities_2 ... ok
+tests.test_project.test_save_entities_1 ... ok
+tests.test_project.test_to_yaml_file_1 ... ok
+tests.test_project.test_to_yaml_file_2 ... ok
+tests.test_project.test_from_yaml_file_1 ... ok
+tests.test_project.test_grep ... ok
+test_rst_tags_view (tests.test_task.TestRstTagsView) ... ok
+test_rst_interesting_attributes_view (tests.test_task.TestViews) ... ok
+test_rst_tags_view (tests.test_task.TestViews) ... ok
+test_summarized_view (tests.test_task.TestViews) ... ok
+test_1 (tests.test_webapp.TestDispatcher)
+Make sure nothing blows up when nothing matches. ... ok
+test_1 (tests.test_webapp.TestHelpHandler) ... ok
+test_1 (tests.test_webapp.TestStaticHandler1)
+Verify I can make an instance of a StaticHandler. ... ok
+test_1 (tests.test_webapp.TestStaticHandler2)
+Verify the handler reples with an accurate Last-Modified header. ... ok
+test_2 (tests.test_webapp.TestStaticHandler2)
+Verify handler sends 304 for cached content. ... ok
+test_3 (tests.test_webapp.TestStaticHandler2)
+When the request includes an If-Modified-Since header, and the ... ok
+test_1 (tests.test_webapp.TestWebApp) ... ok
+test_11 (tests.test_webapp.TestWebApp) ... ok
+test_12 (tests.test_webapp.TestWebApp) ... ok
+test_2 (tests.test_webapp.TestWebApp) ... ok
+test_3 (tests.test_webapp.TestWebApp) ... ok
+test_4 (tests.test_webapp.TestWebApp) ... ok
+test_5 (tests.test_webapp.TestWebApp) ... ok
+test_6 (tests.test_webapp.TestWebApp) ... ok
+test_7 (tests.test_webapp.TestWebApp) ... ok
+test_8 (tests.test_webapp.TestWebApp) ... ok
+test_9 (tests.test_webapp.TestWebApp) ... ok
+test_help (tests.test_webapp.TestWebApp) ... ok
+
+======================================================================
+ERROR: test_1 (tests.test_cmdline.TestMkPitzdir)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/matej/.local/lib/python2.7/site-packages/mock-1.0a2-py2.7.egg/mock.py", line 1186, in patched
+    return func(*args, **keywargs)
+  File "/home/matej/archiv/2012/projekty/pitz/tests/test_cmdline.py", line 176, in test_1
+    mk_pitzdir()
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/cmdline/pitzsetup.py", line 29, in mk_pitzdir
+    os.mkdir(pitzdir)
+OSError: [Errno 17] File exists: '/tmp/.pitz'
+
+======================================================================
+ERROR: test_2 (tests.test_cmdline.TestMkPitzdir)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/matej/archiv/2012/projekty/pitz/tests/test_cmdline.py", line 182, in test_2
+    mk_pitzdir()
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/cmdline/pitzsetup.py", line 29, in mk_pitzdir
+    os.mkdir(pitzdir)
+OSError: [Errno 17] File exists: '/tmp/.pitz'
+
+======================================================================
+ERROR: test_filter (tests.test_cmdline.TestPitzEverything)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/matej/.local/lib/python2.7/site-packages/mock-1.0a2-py2.7.egg/mock.py", line 1186, in patched
+    return func(*args, **keywargs)
+  File "/home/matej/archiv/2012/projekty/pitz/tests/test_cmdline.py", line 63, in test_filter
+    cmdline.pitz_everything()
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/cmdline/__init__.py", line 300, in __call__
+    proj = self.setup_proj(p, options, args)
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/cmdline/__init__.py", line 198, in setup_proj
+    proj = Project.from_pitzdir(pitzdir)
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/project.py", line 299, in from_pitzdir
+    % pitzdir)
+ProjectNotFound: Couldn't find anything in pitzdir /tmp/.pitz
+
+======================================================================
+ERROR: test_grep (tests.test_cmdline.TestPitzEverything)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/matej/.local/lib/python2.7/site-packages/mock-1.0a2-py2.7.egg/mock.py", line 1186, in patched
+    return func(*args, **keywargs)
+  File "/home/matej/archiv/2012/projekty/pitz/tests/test_cmdline.py", line 71, in test_grep
+    cmdline.pitz_everything()
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/cmdline/__init__.py", line 300, in __call__
+    proj = self.setup_proj(p, options, args)
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/cmdline/__init__.py", line 197, in setup_proj
+    pidfile = write_pidfile_or_die(pitzdir)
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/cmdline/__init__.py", line 500, in write_pidfile_or_die
+    raise SystemExit
+SystemExit: 
+-------------------- >> begin captured stdout << ---------------------
+Sorry, found a pidfile!  Kill process 29827.
+
+--------------------- >> end captured stdout << ----------------------
+
+======================================================================
+ERROR: test_nofilter (tests.test_cmdline.TestPitzEverything)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/matej/.local/lib/python2.7/site-packages/mock-1.0a2-py2.7.egg/mock.py", line 1186, in patched
+    return func(*args, **keywargs)
+  File "/home/matej/archiv/2012/projekty/pitz/tests/test_cmdline.py", line 56, in test_nofilter
+    cmdline.pitz_everything()
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/cmdline/__init__.py", line 300, in __call__
+    proj = self.setup_proj(p, options, args)
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/cmdline/__init__.py", line 197, in setup_proj
+    pidfile = write_pidfile_or_die(pitzdir)
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/cmdline/__init__.py", line 500, in write_pidfile_or_die
+    raise SystemExit
+SystemExit: 
+-------------------- >> begin captured stdout << ---------------------
+Sorry, found a pidfile!  Kill process 29827.
+
+--------------------- >> end captured stdout << ----------------------
+
+======================================================================
+ERROR: test_filter (tests.test_cmdline.TestPitzTodo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/matej/.local/lib/python2.7/site-packages/mock-1.0a2-py2.7.egg/mock.py", line 1186, in patched
+    return func(*args, **keywargs)
+  File "/home/matej/archiv/2012/projekty/pitz/tests/test_cmdline.py", line 97, in test_filter
+    cmdline.pitz_todo()
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/cmdline/__init__.py", line 300, in __call__
+    proj = self.setup_proj(p, options, args)
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/cmdline/__init__.py", line 197, in setup_proj
+    pidfile = write_pidfile_or_die(pitzdir)
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/cmdline/__init__.py", line 500, in write_pidfile_or_die
+    raise SystemExit
+SystemExit: 
+-------------------- >> begin captured stdout << ---------------------
+Sorry, found a pidfile!  Kill process 29827.
+
+--------------------- >> end captured stdout << ----------------------
+
+======================================================================
+ERROR: test_grep (tests.test_cmdline.TestPitzTodo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/matej/.local/lib/python2.7/site-packages/mock-1.0a2-py2.7.egg/mock.py", line 1186, in patched
+    return func(*args, **keywargs)
+  File "/home/matej/archiv/2012/projekty/pitz/tests/test_cmdline.py", line 105, in test_grep
+    cmdline.pitz_todo()
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/cmdline/__init__.py", line 300, in __call__
+    proj = self.setup_proj(p, options, args)
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/cmdline/__init__.py", line 197, in setup_proj
+    pidfile = write_pidfile_or_die(pitzdir)
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/cmdline/__init__.py", line 500, in write_pidfile_or_die
+    raise SystemExit
+SystemExit: 
+-------------------- >> begin captured stdout << ---------------------
+Sorry, found a pidfile!  Kill process 29827.
+
+--------------------- >> end captured stdout << ----------------------
+
+======================================================================
+ERROR: test_nofilter (tests.test_cmdline.TestPitzTodo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/matej/.local/lib/python2.7/site-packages/mock-1.0a2-py2.7.egg/mock.py", line 1186, in patched
+    return func(*args, **keywargs)
+  File "/home/matej/archiv/2012/projekty/pitz/tests/test_cmdline.py", line 90, in test_nofilter
+    cmdline.pitz_todo()
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/cmdline/__init__.py", line 300, in __call__
+    proj = self.setup_proj(p, options, args)
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/cmdline/__init__.py", line 197, in setup_proj
+    pidfile = write_pidfile_or_die(pitzdir)
+  File "/home/matej/archiv/2012/projekty/pitz/pitz/cmdline/__init__.py", line 500, in write_pidfile_or_die
+    raise SystemExit
+SystemExit: 
+-------------------- >> begin captured stdout << ---------------------
+Sorry, found a pidfile!  Kill process 29827.
+
+--------------------- >> end captured stdout << ----------------------
+
+======================================================================
+FAIL: test_4 (tests.test_project.TestFindPitzdir)
+Verify we can walk up and find pitzdir.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/matej/archiv/2012/projekty/pitz/tests/test_project.py", line 235, in test_4
+    assert Project.find_pitzdir() == '/tmp/walkup/pitzdir'
+AssertionError
+
+======================================================================
+FAIL: test_5 (tests.test_project.TestFindPitzdir)
+Verify we can walk down and find the pitzdir.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/matej/archiv/2012/projekty/pitz/tests/test_project.py", line 247, in test_5
+    pitzdir_location
+AssertionError: /tmp/.pitz
+
+======================================================================
+FAIL: test_6 (tests.test_project.TestFindPitzdir)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/matej/archiv/2012/projekty/pitz/tests/test_project.py", line 252, in test_6
+    self.assertRaises(pitz.ProjectNotFound, Project.find_pitzdir)
+AssertionError: ProjectNotFound not raised
+
+----------------------------------------------------------------------
+Ran 207 tests in 0.952s
+
+FAILED (failures=3, errors=8)

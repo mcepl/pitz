@@ -23,7 +23,7 @@ def mk_pitzdir():
     if not os.access(x, os.W_OK):
         raise ValueError("I can't write to path %s!" % x)
 
-    pitzdir = os.path.abspath(os.path.join(x, 'pitzdir'))
+    pitzdir = os.path.abspath(os.path.join(x, '.pitz'))
     hooksdir = os.path.join(pitzdir, 'hooks')
 
     os.mkdir(pitzdir)
