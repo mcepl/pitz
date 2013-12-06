@@ -6,3 +6,5 @@ Pitz is a little like ditz_ except with a few changes here and there.
 
 Read pitz/docs for more background.
 
+.. image:: https://secure.travis-ci.org/mw44118/pitz.png
+   :alt: Build Status
